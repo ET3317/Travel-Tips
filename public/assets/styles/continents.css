@@ -1,0 +1,37 @@
+.continent-picture {
+    width: 100vw;
+    height: 60vh;
+    margin-left: 5%;
+    border-radius:6px;
+}
+.tt-continentTitle{
+    text-align:center;
+    font-family: "Just Another Hand", cursive;
+    font-size:4vw;
+}
+.tt-containerContinent{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    margin-top:5%;
+}
+.tt-describeContinent{
+    width:80%;
+    font-family: 'Itim', cursive;
+    margin-left:5%;
+}
+.tt-title-tipsContinent{
+    background-color:#FFA63E;
+    width:50vw;
+    display:flex;
+    justify-content:center;
+    margin: 0 auto;
+    border-radius:6px;
+    margin-top:3%
+}
+.tt-tipsContinent{
+    text-align:center;
+    font-family: "Just Another Hand", cursive;
+    font-size:4vw;
+    margin-top:2%
+}

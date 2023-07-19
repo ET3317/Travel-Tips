@@ -1,0 +1,236 @@
+/*  VIDEO */
+#test-video{
+    width:80vw;
+    height:70vh;
+    border-radius: 6px;
+}
+
+/* LOGO */
+.tt-welcomeTo{
+    width:90vw;
+    height:60vh;
+    display:flex;
+    flex-direction: row;
+    margin-top:2%;
+    margin-left:5%;
+    margin-bottom:10%
+}
+#tt-logoWelcome{
+    height:100%;
+    margin-top:2%;
+}
+
+/* TEXT */
+.tt-text-test1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.tt-conceptText{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    width:35%;
+    border:2px solid #6D28D9;
+    border-radius:8px;
+    box-shadow: 10px 5px 5px lightgrey;
+}
+.tt-conceptText p{
+    width:90%;
+    font-family: Itim, cursive;
+}
+.tt-conceptText h2{
+    font-family: "Just Another Hand", cursive;
+    font-size:4vw;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+.tt-conceptText:hover {
+    transform: scale(1.1);
+}
+.tt-historyText{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    width:40%;
+    border:2px solid #FFA63E;
+    border-radius:8px;
+    box-shadow: 10px 5px 5px lightgrey;
+}
+.tt-historyText p{
+    width:90%;
+    font-family: Itim, cursive;
+}
+.tt-historyText h2{
+    margin-top:5%;
+    margin-bottom:5%;
+    font-family: "Just Another Hand", cursive;
+    font-size:4vw;
+}
+.tt-historyText:hover {
+    transform: scale(1.1);
+}
+
+/*   LOGIN/REGISTRATION       */
+
+.tt-container-logHome{
+    margin-top:5%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left:5vw;
+    align-items: center;
+    width:90vw;
+}
+.tt-container-logHome img{
+    width:15vw;
+    height:80vh
+}
+
+.tt-register-login-homePage{
+    width:60vw;
+    height:70vh;
+    display: flex;
+    flex-direction: column;
+}
+.tt-registrationForm-homePage{
+    width:45vw;
+    height:100%;
+    border:2px solid #FFA63E;
+    border-radius:8px;
+    box-shadow: 10px 5px 5px lightgrey;
+}
+.tt-loginForm-homePage{
+    width:45vw;
+    height:100%;
+    border:2px solid #6D28D9;
+    border-radius:8px;
+    box-shadow: 10px 5px 5px lightgrey;
+}
+
+/*  CATEGORIES  */
+.tt-title-cardsCategories-carre{
+    color:white;
+    font-size:xxx-large;
+    font-family: 'Just Another Hand', cursive;
+    text-align: center;
+    margin-top:10%
+}
+.tt-title-cardsCategories-rectangle{
+    color:white;
+    font-size:xx-large;
+    font-family: 'Just Another Hand', cursive;
+    text-align: center;
+    margin-top:10%
+}
+.tt-component-categories{
+    width:91vw;
+    height:50vh;
+    margin-bottom:2%;
+}
+.tt-catHomePage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    width: 90vw;
+    margin-left:auto;
+    margin-right:auto;
+}
+.div1 { grid-area: 1 / 1 / 2 / 2;background-image:url("../images/Categories-HomePageCards/CARDS-StreetArt-Europe-Fr.jpg"); background-repeat: no-repeat; background-size:100%; width:45vw; height:30vh; border-radius:6px }
+.div2 { grid-area: 2 / 1 / 3 / 2;background-image:url("../images/Categories-HomePageCards/CARDS-Sunset.jpeg"); background-repeat: no-repeat; background-size:100%; width:45vw; height:30vh; border-radius:6px }
+.div3 { grid-area: 1 / 2 / 3 / 3;background-image:url("../images/Categories-HomePageCards/CARDS-Glisse.jpg"); background-position: center; background-repeat: no-repeat; background-size:100%; width:45vw; height:62vh; border-radius:6px }
+.div4 { grid-area: 3 / 1 / 5 / 2;background-image:url("../images/Categories-HomePageCards/CARDS-Food.jpg"); background-repeat: no-repeat; background-size:100%; width:45vw; height:62vh; border-radius:6px }
+.div5 { grid-area: 3 / 2 / 4 / 3; background-image:url("../images/Categories-HomePageCards/CARDS-MusicBar.jpg"); background-repeat: no-repeat; background-size:100%; width:45vw; height:30vh; border-radius:6px  }
+.div6 { grid-area: 4 / 2 / 5 / 3;background-image:url("../images/Categories-HomePageCards/CARDS-Star.jpg"); background-repeat: no-repeat; background-size:100%; width:45vw; height:30vh; border-radius:6px  }
+.div1:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    color:white;
+}
+.div2:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    color:white;
+}
+.div3:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    color:white;
+}
+.div4:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    color:white;
+}
+.div5:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    color:white;
+}
+.div6:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    color:white;
+}
+
+/*          PHONE            */
+@media screen and (max-width: 700px) {
+    .tt-welcomeTo{
+        flex-direction: column-reverse;
+        margin-bottom: 5%;
+    }
+    #test-video{
+        width:100vw;
+        height:100vh;
+    }
+    #tt-logoWelcome{
+        height:70%;
+        width:60%;
+        margin-left:20%;
+        margin-top:20%;
+    }
+    .tt-text-test1 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tt-conceptText {
+        width: 90vw;
+        margin-bottom:5%;
+    }
+
+    .tt-historyText {
+        width: 90vw;
+        margin-bottom:5%;
+    }
+
+    .tt-historyText p {
+        width: 90%;
+    }
+
+    .tt-conceptText p {
+        width: 90%;
+    }
+    .tt-conceptText:hover {
+        transform: none;
+    }
+    .tt-historyText:hover{
+        transform: none;
+    }
+    .tt-component-categories{
+        height:30vh;
+    }
+    .tt-catHomePage{
+        display: flex;
+        flex-direction: column;
+        grid:none;
+    }
+    .div1, .div2, .div3, .div4, .div5, .div6{
+        width:90vw;
+        grid:none;
+        height:30vh;
+    }
+}

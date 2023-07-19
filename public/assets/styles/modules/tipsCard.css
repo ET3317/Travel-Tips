@@ -1,0 +1,56 @@
+.tt-container-titleCategories{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    margin-bottom:5%;
+}
+.rectangle-3D-tips {
+    width: 20vw;
+    height: 30vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius:4px;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    margin-top:5%;
+    margin-left:5%;
+}
+
+.rectangle-3D-tips::before {
+    content: "";
+    background-image: url("../../images/sunset-bali.jpeg");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+}
+
+.carre-3D-tips {
+    background-color: #FFA63E;
+    position: absolute;
+    color:white;
+    font-size:10px;
+    font-family:serif;
+    box-shadow: 1px 1px;
+    border-radius:4px;
+}
+.carre-3D-tips p{
+    margin-left:55%;
+    position: relative;
+}
+.cercle-tips{
+    position: relative;
+    background-image:url("../../images/profil-picture-EJ.jpg");
+    background-size: 60px;
+    border-radius:50%;
+    width:4vw;
+    height:4vw;
+    border:2px solid;
+    margin:5% 5%;
+}

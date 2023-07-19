@@ -1,0 +1,103 @@
+<!---<nav class="navbar navbar-expand-lg shadow-5-strong" style="position: absolute">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="/assets/images/logo-TravelTips.png" style="width:60px; height:80px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="#">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">All tips</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Thèmes
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Food</a></li>
+                        <li><a class="dropdown-item" href="#">Ride</a></li>
+                        <li><a class="dropdown-item" href="#">Sunset</a></li>
+                        <li><a class="dropdown-item" href="#">Reggae Bar</a></li>
+                        <li><a class="dropdown-item" href="#">Street Art</a></li>
+                        <li><a class="dropdown-item" href="#">Incontournables</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Continents
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Afrique</a></li>
+                        <li><a class="dropdown-item" href="#">Amérique du nord</a></li>
+                        <li><a class="dropdown-item" href="#">Amérique du sud</a></li>
+                        <li><a class="dropdown-item" href="#">Asie</a></li>
+                        <li><a class="dropdown-item" href="#">Europe</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex mx-auto" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success bg-warning" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>--->
+
+<div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-light p-4">
+        <a href="{{ path('app_home') }}" style="text-decoration:none">
+            <h5 class="text-warning h4">TRAVEL TIPS</h5></a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Profil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('app_tips_index') }}">All tips</a>
+            </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Thèmes
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{ path('app_category_show', {'id': 6}) }}">STREET ART</a></li>
+                <li><a class="dropdown-item" href="{{ path('app_category_show', {'id': 3}) }}">SUNSET</a></li>
+                <li><a class="dropdown-item" href="{{ path('app_category_show', {'id': 1}) }}">FOOD</a></li>
+                <li><a class="dropdown-item" href="{{ path('app_category_show', {'id': 2}) }}">GLISSE</a></li>
+                <li><a class="dropdown-item" href="{{ path('app_category_show', {'id': 5}) }}">INCONTOURNABLES</a></li>
+                <li><a class="dropdown-item" href="{{ path('app_category_show', {'id': 4}) }}">REGGAE BAR</a></li>
+                <li><hr class="dropdown-divider"></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Continents
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{ path('app_continent_show', {'id': 1}) }}">ASIE</a></li>
+                <li><a class="dropdown-item" href="{{ path('app_continent_show', {'id': 2}) }}">AFRIQUE</a></li>
+                <li><a class="dropdown-item" href="{{ path('app_continent_show', {'id': 3}) }}">AMERIQUE DU SUD</a></li>
+                <li><a class="dropdown-item" href="{{ path('app_continent_show', {'id': 4}) }}">AMERIQUE DU NORD</a></li>
+                <li><a class="dropdown-item" href="{{ path('app_continent_show', {'id': 5}) }}">EUROPE</a></li>
+                <li><hr class="dropdown-divider"></li>
+            </ul>
+        </li>
+        </ul>
+        <a class="navbar-brand" href="#"><img src="/assets/images/logo-TravelTips.png" style="width:60px; height:80px"></a>
+    </div>
+</div>
+<nav class="navbar navbar-dark bg-light">
+    <div class="container-fluid">
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success text-info border-info" type="submit">Search</button>
+        </form>
+        <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
