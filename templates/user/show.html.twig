@@ -3,40 +3,24 @@
 {% block title %}User{% endblock %}
 
 {% block body %}
-    <h1>User</h1>
+    <div class="dashboardUserPage">
+        <div class="welcomePicture">
+        <div class="circle-profilPicture"></div>
+    <h1 class="titleWelcomeUserPage">Bienvenue {{ user.firstname}}</h1>
+        </div>
+        <section class="buttons-userPage">
+            <a href="{{ path('app_user_edit', {'id': user.id}) }}">
+                <button type="button" class="btn btn-warning">Personal Informations</button>
+            </a>
+            <a href="{{ path('app_user_edit', {'id': user.id}) }}">
+                <button type="button" class="btn btn-warning">Edit Picture</button>
+            </a>
+            <a href="{{ path('app_user_edit', {'id': user.id}) }}">
+                {{ include('user/_delete_form.html.twig') }}
+            </a>
+        </section>
+    </div>
+    <img src="/assets/images/tipsPublished.png" id="tt-bannersUserPage">
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ user.id }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ user.email }}</td>
-            </tr>
-            <tr>
-                <th>Roles</th>
-                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-            </tr>
-            <tr>
-                <th>Password</th>
-                <td>{{ user.password }}</td>
-            </tr>
-            <tr>
-                <th>Firstname</th>
-                <td>{{ user.firstname }}</td>
-            </tr>
-            <tr>
-                <th>Lastname</th>
-                <td>{{ user.lastname }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_user_index') }}">back to list</a>
-
-    <a href="{{ path('app_user_edit', {'id': user.id}) }}">edit</a>
-
-    {{ include('user/_delete_form.html.twig') }}
+    <img src="/assets/images/tipsSaved.png" id="tt-bannersUserPage">
 {% endblock %}

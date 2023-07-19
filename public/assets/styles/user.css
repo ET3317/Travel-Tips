@@ -1,0 +1,49 @@
+.dashboardUserPage{
+    width: 100vw;
+    background-image:url("../images/UserspaceTest.png");
+    background-repeat:no-repeat;
+    background-size:100vw;
+    background-position-y:50%;
+    height:50vh;
+    margin-bottom:5vh;
+}
+.welcomePicture{
+    display:flex;
+    flex-direction:row;
+}
+.circle-profilPicture{
+    width: 20vw;
+    height: 40vh;
+    border-radius: 50%;
+    background-color: #000;
+    margin-top:2%;
+    margin-left:2%;
+}
+
+.titleWelcomeUserPage{
+    text-align:center;
+    padding-top:5%;
+    font-family:'Just Another Hand', cursive;
+    font-size:8vw;
+    margin-left:15%;
+    margin-top:2%;
+}
+.buttons-userPage{
+    display:flex;
+    flex-direction:row;
+    justify-content:center
+}
+.buttons-userPage button{
+    background-color:black;
+    color:orange;
+    font-family:'Itim', cursive;
+    width:15vw;
+    margin-left:5vw;
+    margin-top:-2vw;
+}
+button a{
+    margin-left:5%
+}
+#tt-bannersUserPage{
+  margin-left:8vw;
+}
