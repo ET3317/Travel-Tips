@@ -1,0 +1,22 @@
+<section class="container" style="width:40vw; display:flex; justify-content:center; margin-top:5%; border:2px solid orange; border-radius:6px; box-shadow: 10px 5px 5px lightgrey;">
+    <div class="col">
+        <div class="row">
+            <form method="post">
+                <h1 class="h3 mb-3 font-weight-normal" style="text-align:center">Please sign in</h1>
+                <label for="inputEmail">Email</label>
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                <label for="inputPassword" style="margin-top:3%">Password</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+                <input type="hidden" name="_csrf_token"
+                       value="{{ csrf_token('authenticate') }}"
+                >
+                <div class="text-center">
+                    <button class="btn btn-lg btn-primary mt-3 mx-auto mb-3" type="submit">
+                        Sign in
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

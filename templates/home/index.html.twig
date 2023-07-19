@@ -30,40 +30,41 @@
         <div class="tt-container-logHome">
             <img src="/assets/images/Rectangle97.png">
             <section class="tt-register-login-homePage">
-                <div class="tt-registrationForm-homePage">
-                    <h3>CONNEXION</h3>
-                </div>
                 <div class="tt-loginForm-homePage">
-                    <h3>INSCRIPTION</h3>
+                    {% include 'modules/_login.html.twig' %}
+                </div>
+                <div class="tt-registrationForm-homePage">
+                    <p>Published a TIPS</p>
                 </div>
             </section>
             <img src="/assets/images/Rectangle99.png">
         </div>
         <!----END OF INSCRIPTION / CONNECTION------>
-        <!---    CATEGORIES         ----->
-        <div style="display: flex; justify-content: center">
-            <img class="tt-component-categories" src="/assets/images/Component-Categories.png">
-        </div>
-        <div class="tt-catHomePage">
-            <div class="div1">
-                <h2 class="tt-title-cardsCategories-rectangle">STREET ART</h2>
-            </div>
-            <div class="div2">
-                <h2 class="tt-title-cardsCategories-rectangle">SUNSET</h2>
-            </div>
-            <div class="div3">
-                <h2 class="tt-title-cardsCategories-carre">GLISSE</h2>
-            </div>
-            <div class="div4">
-                <h2 class="tt-title-cardsCategories-carre">FOOD</h2>
-            </div>
-            <div class="div5">
-                <h2 class="tt-title-cardsCategories-rectangle">REGGAE BAR</h2>
-            </div>
-            <div class="div6">
-                <h2 class="tt-title-cardsCategories-rectangle">INCONTOURNABLES</h2>
-            </div>
-        </div>
+
+    <!-- CATEGORIES -->
+    <div style="display: flex; justify-content: center">
+        <img class="tt-component-categories" src="/assets/images/Component-Categories.png">
+    </div>
+    <div class="tt-catHomePage">
+        <a href="{{ path('app_category_show', {'id': 6}) }}" class="div1">
+            <h2 class="tt-title-cardsCategories-rectangle">STREET ART</h2>
+        </a>
+        <a href="{{ path('app_category_show', {'id': 3}) }}" class="div2">
+            <h2 class="tt-title-cardsCategories-rectangle">SUNSET</h2>
+        </a>
+        <a href="{{ path('app_category_show', {'id': 2}) }}" class="div3">
+            <h2 class="tt-title-cardsCategories-carre">GLISSE</h2>
+        </a>
+        <a href="{{ path('app_category_show', {'id': 1}) }}" class="div4">
+            <h2 class="tt-title-cardsCategories-carre">FOOD</h2>
+        </a>
+        <a href="{{ path('app_category_show', {'id': 4}) }}" class="div5">
+            <h2 class="tt-title-cardsCategories-rectangle">REGGAE BAR</h2>
+        </a>
+        <a href="{{ path('app_category_show', {'id': 5}) }}" class="div6">
+            <h2 class="tt-title-cardsCategories-rectangle">INCONTOURNABLES</h2>
+        </a>
+    </div>
         <!------SMALL TIPS CARD-------->
         <div class="tt-container-titleCategories">
             <img src="/assets/images/Component-tips-homePage.png" style="width:40vw; height:30vh; margin-top:5%">

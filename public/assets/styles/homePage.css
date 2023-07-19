@@ -103,9 +103,6 @@
 .tt-loginForm-homePage{
     width:45vw;
     height:100%;
-    border:2px solid #6D28D9;
-    border-radius:8px;
-    box-shadow: 10px 5px 5px lightgrey;
 }
 
 /*  CATEGORIES  */
@@ -138,12 +135,12 @@
     margin-left:auto;
     margin-right:auto;
 }
-.div1 { grid-area: 1 / 1 / 2 / 2;background-image:url("../images/Categories-HomePageCards/CARDS-StreetArt-Europe-Fr.jpg"); background-repeat: no-repeat; background-size:100%; width:45vw; height:30vh; border-radius:6px }
-.div2 { grid-area: 2 / 1 / 3 / 2;background-image:url("../images/Categories-HomePageCards/CARDS-Sunset.jpeg"); background-repeat: no-repeat; background-size:100%; width:45vw; height:30vh; border-radius:6px }
-.div3 { grid-area: 1 / 2 / 3 / 3;background-image:url("../images/Categories-HomePageCards/CARDS-Glisse.jpg"); background-position: center; background-repeat: no-repeat; background-size:100%; width:45vw; height:62vh; border-radius:6px }
-.div4 { grid-area: 3 / 1 / 5 / 2;background-image:url("../images/Categories-HomePageCards/CARDS-Food.jpg"); background-repeat: no-repeat; background-size:100%; width:45vw; height:62vh; border-radius:6px }
-.div5 { grid-area: 3 / 2 / 4 / 3; background-image:url("../images/Categories-HomePageCards/CARDS-MusicBar.jpg"); background-repeat: no-repeat; background-size:100%; width:45vw; height:30vh; border-radius:6px  }
-.div6 { grid-area: 4 / 2 / 5 / 3;background-image:url("../images/Categories-HomePageCards/CARDS-Star.jpg"); background-repeat: no-repeat; background-size:100%; width:45vw; height:30vh; border-radius:6px  }
+.div1 { grid-area: 1 / 1 / 2 / 2;background-image:url("../images/Categories-HomePageCards/CARDS-StreetArt-Europe-Fr.jpg"); background-repeat: no-repeat; background-size:100%; width:45vw; height:30vh; border-radius:6px; text-decoration:none }
+.div2 { grid-area: 2 / 1 / 3 / 2;background-image:url("../images/Categories-HomePageCards/CARDS-Sunset.jpeg"); background-repeat: no-repeat; background-size:100%; width:45vw; height:30vh; border-radius:6px; text-decoration:none }
+.div3 { grid-area: 1 / 2 / 3 / 3;background-image:url("../images/Categories-HomePageCards/CARDS-Glisse.jpg"); background-position: center; background-repeat: no-repeat; background-size:100%; width:45vw; height:62vh; border-radius:6px; text-decoration:none }
+.div4 { grid-area: 3 / 1 / 5 / 2;background-image:url("../images/Categories-HomePageCards/CARDS-Food.jpg"); background-repeat: no-repeat; background-size:100%; width:45vw; height:62vh; border-radius:6px; text-decoration:none }
+.div5 { grid-area: 3 / 2 / 4 / 3; background-image:url("../images/Categories-HomePageCards/CARDS-MusicBar.jpg"); background-repeat: no-repeat; background-size:100%; width:45vw; height:30vh; border-radius:6px; text-decoration:none  }
+.div6 { grid-area: 4 / 2 / 5 / 3;background-image:url("../images/Categories-HomePageCards/CARDS-Star.jpg"); background-repeat: no-repeat; background-size:100%; width:45vw; height:30vh; border-radius:6px; text-decoration:none  }
 .div1:hover{
     text-decoration: underline;
     text-decoration-thickness: 4px;
