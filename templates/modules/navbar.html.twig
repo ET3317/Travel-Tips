@@ -54,7 +54,13 @@
             <h5 class="text-warning h4">TRAVEL TIPS</h5></a>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="#">Profil</a>
+                {% if app.user %}
+                    <p>Profil</p>
+                    <a class="nav-link" href="{{ path('app_logout') }}">Log out</a>
+                {% else %}
+                    <a class="nav-link" href="{{ path('app_login') }}">Log in</a>
+                    <a class="nav-link" href="{{ path('app_register') }}">Registration</a>
+                {% endif %}
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('app_tips_index') }}">All tips</a>
