@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Tips;
+use App\Controller\TipsController;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,7 +19,6 @@ class HomeController extends AbstractController
         $lastUsername = $this->getLastUsername($request);
 
         return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController',
             'error' => $error,
             'last_username' => $lastUsername,
         ]);

@@ -3,32 +3,17 @@
 {% block title %}Tips{% endblock %}
 
 {% block body %}
-    <h1>Tips</h1>
+    <section class="tt-container-oneTips">
+        <h1 class="tt-titleOneTips">{{ tip.title }}</h1>
+        <div class="tt-tipsRow">
+        <div class="tt-container-pictureOneTips">
+            {{ tip.picture }}
+        </div>
+        <div class="tt-container-textOneTips">
+            {{ tip.text }}
+        </div>
+        </div>
+    </section>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ tip.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ tip.title }}</td>
-            </tr>
-            <tr>
-                <th>Text</th>
-                <td>{{ tip.text }}</td>
-            </tr>
-            <tr>
-                <th>Picture</th>
-                <td>{{ tip.picture }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_tips_index') }}">back to list</a>
-
-    <a href="{{ path('app_tips_edit', {'id': tip.id}) }}">edit</a>
-
-    {{ include('tips/_delete_form.html.twig') }}
+    <a href="{{ path('app_tips_index') }}">back to all TIPS</a>
 {% endblock %}

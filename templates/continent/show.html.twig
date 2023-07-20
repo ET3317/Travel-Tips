@@ -65,8 +65,27 @@
     {% else %}
         <h2>Aucun continent ne correspond à l'URL</h2>
     {% endif %}
-    <div class="tt-title-tipsContinent">
-    <h2 class="tt-tipsContinent">Retrouvez tous nos TIPS</h2>
-    </div>
+    <!-- Affichage des tips correspondant à l'ID de la catégorie -->
+    {% if tips is not empty %}
+        <div class="tt-title-tipsContinent">
+            <h2 class="tt-tipsContinent">Find all our TIPS in {{ continent.name }}</h2>
+        </div>
+<section class="tt-tipsInCat">
+        {% for tip in tips %}
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{ tip.picture }}" alt="Image du Tip">
+                <div class="card-body">
+                    <h5 class="card-title">{{ tip.title }}</h5>
+                    <p class="card-text">{{ tip.text }}</p>
+                    <a href="{{ path('app_tips_show', {'id': tip.id}) }}" class="btn btn-primary">Voir le Tips</a>
+                </div>
+            </div>
+        {% endfor %}
+</section>
+    {% else %}
+        <div class="tt-title-tipsContinent">
+            <h2 class="tt-tipsContinent">There's no TIPS available for this continent.</h2>
+        </div>
+    {% endif %}
 {% endblock %}
 

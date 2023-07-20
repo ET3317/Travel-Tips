@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Continent;
 use App\Form\ContinentType;
 use App\Repository\ContinentRepository;
+use App\Repository\TipsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -43,10 +44,14 @@ class ContinentController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_continent_show', methods: ['GET'])]
-    public function show(Continent $continent): Response
+    public function show(Continent $continent, TipsRepository $tipsRepository): Response
     {
+        // Récupérer les tips associés à la catégorie spécifique
+        $tips = $tipsRepository->findBy(['continent' => $continent]);
+
         return $this->render('continent/show.html.twig', [
             'continent' => $continent,
+            'tips' => $tips, // Passer les tips récupérés à la vue Twig
         ]);
     }
 
