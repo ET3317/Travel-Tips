@@ -12,15 +12,22 @@
             <a href="{{ path('app_user_edit', {'id': user.id}) }}">
                 <button type="button" class="btn btn-warning">Personal Informations</button>
             </a>
-            <a href="{{ path('app_user_edit', {'id': user.id}) }}">
                 <button type="button" class="btn btn-warning">Edit Picture</button>
-            </a>
             <a href="{{ path('app_user_edit', {'id': user.id}) }}">
                 {{ include('user/_delete_form.html.twig') }}
             </a>
         </section>
     </div>
     <img src="/assets/images/tipsPublished.png" id="tt-bannersUserPage">
+        {% if tips %}
+            {% for tip in tips %}
+                {% include 'modules/tipsCard.html.twig' %}
+            {% endfor %}
+        {% else %}
+            <div class="tt-title-tipsContinent">
+                <h2 class="tt-tipsContinent">There's no TIPS.</h2>
+            </div>
+        {% endif %}
 
     <img src="/assets/images/tipsSaved.png" id="tt-bannersUserPage">
 {% endblock %}

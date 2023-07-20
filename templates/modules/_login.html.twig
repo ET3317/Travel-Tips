@@ -11,10 +11,11 @@
                 <input type="hidden" name="_csrf_token"
                        value="{{ csrf_token('authenticate') }}"
                 >
-                <div class="text-center">
+                <div class="text-center" style="display: flex; flex-direction: column">
                     <button class="btn btn-lg btn-primary mt-3 mx-auto mb-3" type="submit">
                         Sign in
                     </button>
+                    <a href="{{ path('app_forgot_password_request') }}">Mot de passe oublié?</a>
                 </div>
             </form>
         </div>

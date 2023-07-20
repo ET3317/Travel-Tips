@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{ tip.picture }}" alt="Image du Tip">
+    <div class="card-body">
+        <h5 class="card-title">{{ tip.title }}</h5>
+        <p class="card-text">{{ tip.text }}</p>
+        <a href="{{ path('app_tips_show', {'id': tip.id}) }}" class="btn btn-primary">Voir le Tip</a>
+    </div>
+</div>
