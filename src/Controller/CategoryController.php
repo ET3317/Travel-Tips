@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Category;
 use App\Form\CategoryType;
 use App\Repository\CategoryRepository;
+use App\Repository\TipsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -43,10 +44,14 @@ class CategoryController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_category_show', methods: ['GET'])]
-    public function show(Category $category): Response
+    public function show(Category $category, TipsRepository $tipsRepository): Response
     {
+        // Récupérer les tips associés à la catégorie spécifique
+        $tips = $tipsRepository->findBy(['category' => $category]);
+
         return $this->render('category/show.html.twig', [
             'category' => $category,
+            'tips' => $tips, // Passer les tips récupérés à la vue Twig
         ]);
     }
 
