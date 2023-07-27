@@ -4,8 +4,11 @@ namespace App\Entity;
 
 use App\Repository\TipsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 
 #[ORM\Entity(repositoryClass: TipsRepository::class)]
+#[Vich\Uploadable]
 class Tips
 {
     #[ORM\Id]
@@ -18,9 +21,6 @@ class Tips
 
     #[ORM\Column(length: 400)]
     private ?string $text = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $picture = null;
 
     #[ORM\ManyToOne(inversedBy: 'tips')]
     #[ORM\JoinColumn(nullable: false)]
@@ -41,6 +41,16 @@ class Tips
     #[ORM\ManyToOne(inversedBy: 'tips')]
     #[ORM\JoinColumn(nullable: false)]
     private ?User $user = null;
+
+    #[Vich\UploadableField(mapping: 'tips_image', fileNameProperty: 'imageName', size: 'imageSize')]
+    private ?File $imageFile = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?string $imageName = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?int $imageSize = null;
+
 
     public function getId(): ?int
     {
@@ -67,18 +77,6 @@ class Tips
     public function setText(string $text): static
     {
         $this->text = $text;
-
-        return $this;
-    }
-
-    public function getPicture(): ?string
-    {
-        return $this->picture;
-    }
-
-    public function setPicture(string $picture): static
-    {
-        $this->picture = $picture;
 
         return $this;
     }
@@ -141,5 +139,41 @@ class Tips
         $this->user = $user;
 
         return $this;
+    }
+
+    public function setImageFile(?File $imageFile = null): void
+    {
+        $this->imageFile = $imageFile;
+
+        if (null !== $imageFile) {
+            // It is required that at least one field changes if you are using doctrine
+            // otherwise the event listeners won't be called and the file is lost
+            $this->updatedAt = new \DateTimeImmutable();
+        }
+    }
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    public function setImageName(?string $imageName): void
+    {
+        $this->imageName = $imageName;
+    }
+
+    public function getImageName(): ?string
+    {
+        return $this->imageName;
+    }
+
+    public function setImageSize(?int $imageSize): void
+    {
+        $this->imageSize = $imageSize;
+    }
+
+    public function getImageSize(): ?int
+    {
+        return $this->imageSize;
     }
 }

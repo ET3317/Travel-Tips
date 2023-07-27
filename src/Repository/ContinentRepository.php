@@ -20,7 +20,14 @@ class ContinentRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Continent::class);
     }
-
+    public function findAllExceptCurrent(Continent $currentContinent): array
+    {
+        return $this->createQueryBuilder('c')
+            ->andWhere('c.id != :currentId')
+            ->setParameter('currentId', $currentContinent->getId())
+            ->getQuery()
+            ->getResult();
+    }
 //    /**
 //     * @return Continent[] Returns an array of Continent objects
 //     */

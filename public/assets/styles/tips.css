@@ -21,7 +21,7 @@
     margin-top:2%;
     margin-left:10vw;
     width:80vw;
-    height:80vh;
+    height:84vh;
     border:2px solid #FFA63E;
     border-radius:8px;
     box-shadow: 10px 5px 5px lightgrey;
@@ -30,18 +30,25 @@
     display:flex;
     flex-direction: row;
 }
+
 .tt-titleOneTips{
     margin-top:2%;
     font-size:xxx-large;
     font-family: 'Just Another Hand', cursive;
     text-align: center;
 }
-.tt-container-pictureOneTips{
-    width:50%
+.tt-img-tips {
+    width: 50%;
+    height: 80vh;
+    object-fit: cover;
+    margin:1%;
 }
 .tt-container-textOneTips{
     width:50%;
     font-family: Itim, cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*     SHOW in category & continent     */
 .tt-tipsInCat{
@@ -50,4 +57,26 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+/*     TIPS FORM     */
+
+.tt-container-postTips{
+    width:50vw;
+    display:flex;
+    align-items: flex-start;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:5%;
+    border:2px solid orange;
+    border-radius:6px;
+    box-shadow: 10px 5px 5px lightgrey;
+}
+/*   TIPS TITLE ON HOMEPAGE       */
+.tt-container-titleCategories{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    margin-bottom:5%;
 }

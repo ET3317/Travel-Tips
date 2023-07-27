@@ -21,6 +21,21 @@ class TipsRepository extends ServiceEntityRepository
         parent::__construct($registry, Tips::class);
     }
 
+
+    /**
+     * Récupère les 12 derniers tips publiés.
+     *
+     * @return Tips[]
+     */
+    /*public function findLatestPublishedTips(): array
+    {
+        return $this->createQueryBuilder('t')
+            ->orderBy('t.publishedAt', 'DESC')
+            ->setMaxResults(12)
+            ->getQuery()
+            ->getResult();
+    }
+
 //    /**
 //     * @return Tips[] Returns an array of Tips objects
 //     */

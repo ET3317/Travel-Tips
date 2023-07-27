@@ -1,3 +1,11 @@
 #registration_form_agreeTerms{
     margin-left:10px;
 }
+#inputEmail{
+    margin-top:2%;
+    font-family: 'Itim', cursive;
+}
+#inputPassword{
+    margin-top:2%;
+    font-family: 'Itim', cursive;
+}

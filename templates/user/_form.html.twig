@@ -1,11 +1,12 @@
 <section class="container" style="width:50vw; display:flex; justify-content:center; margin-top:5%; border:2px solid orange; border-radius:6px; box-shadow: 10px 5px 5px lightgrey;">
     <div class="row">
         <div class="col">
-            <h1 style="text-align:center">Edit User</h1>
+            <h1 style="text-align:center; margin-top: 5%; font-family:'Just Another Hand', cursive; font-size:8vw">Edit User</h1>
 {{ form_start(form) }}
     {{ form_widget(form) }}
             </div>
             <button type="submit" class="btn btn-warning my-3">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
+        <a href="{{ path('app_forgot_password_request') }}" style="text-align: center; margin-bottom: 5%">Mot de passe oublié?</a>
         </div>
     </div>

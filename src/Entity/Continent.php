@@ -30,6 +30,11 @@ class Continent
         $this->tips = new ArrayCollection();
     }
 
+    public function __toString(): string
+    {
+        return $this->name; // Assuming 'name' is the property representing the city's name
+    }
+
     public function getId(): ?int
     {
         return $this->id;

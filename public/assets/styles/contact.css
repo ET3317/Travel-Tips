@@ -1,0 +1,17 @@
+/* contact */
+.tt-container-contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto; width:80vw;
+    margin-top: 5%;
+}
+
+.tt-title-contactForm{
+    text-align:center;
+    font-family: 'Just Another Hand', cursive;
+    font-size: 5vw;
+}
+
+
+

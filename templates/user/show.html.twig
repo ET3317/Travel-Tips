@@ -5,7 +5,7 @@
 {% block body %}
     <div class="dashboardUserPage">
         <div class="welcomePicture">
-        <div class="circle-profilPicture"></div>
+            <div class="circle-profilPicture"></div>
     <h1 class="titleWelcomeUserPage">Bienvenue {{ user.firstname}}</h1>
         </div>
         <section class="buttons-userPage">
@@ -18,16 +18,19 @@
             </a>
         </section>
     </div>
+{{ include('tips/_form.html.twig') }}
+
     <img src="/assets/images/tipsPublished.png" id="tt-bannersUserPage">
+    <div class="tt-container-postTipsProfilPage">
         {% if tips %}
+        <section class="tt-tipsInCat">
             {% for tip in tips %}
                 {% include 'modules/tipsCard.html.twig' %}
             {% endfor %}
+        </section>
         {% else %}
             <div class="tt-title-tipsContinent">
                 <h2 class="tt-tipsContinent">There's no TIPS.</h2>
             </div>
         {% endif %}
-
-    <img src="/assets/images/tipsSaved.png" id="tt-bannersUserPage">
 {% endblock %}

@@ -1,3 +1,7 @@
+/*   NAVBAR   */
+#tt-title-navbar{
+    font-family: "Just Another Hand", cursive;
+}
 /*  VIDEO */
 #test-video{
     width:80vw;
@@ -34,6 +38,7 @@
     border:2px solid #6D28D9;
     border-radius:8px;
     box-shadow: 10px 5px 5px lightgrey;
+    transition: transform 1s ease;
 }
 .tt-conceptText p{
     width:90%;
@@ -56,6 +61,7 @@
     border:2px solid #FFA63E;
     border-radius:8px;
     box-shadow: 10px 5px 5px lightgrey;
+    transition: transform 1s ease;
 }
 .tt-historyText p{
     width:90%;
@@ -73,7 +79,7 @@
 
 /*   LOGIN/REGISTRATION       */
 
-.tt-container-logHome{
+.tt-container-formTipsHomePage{
     margin-top:5%;
     display:flex;
     flex-direction: row;
@@ -81,18 +87,13 @@
     margin-left:5vw;
     align-items: center;
     width:90vw;
+    margin-bottom:5%;
 }
-.tt-container-logHome img{
+.tt-rect{
     width:15vw;
     height:80vh
 }
 
-.tt-register-login-homePage{
-    width:60vw;
-    height:70vh;
-    display: flex;
-    flex-direction: column;
-}
 .tt-registrationForm-homePage{
     width:45vw;
     height:100%;
@@ -105,6 +106,17 @@
     height:100%;
 }
 
+/*  TIPS HOME PAGE      */
+.tt-container-componentPostTips{
+    display:flex;
+    justify-content: center;
+    margin-left:auto;
+    margin-top:5%;
+}
+.tt-componentPostTips{
+    width:50vw;
+    height:30vh;
+}
 /*  CATEGORIES  */
 .tt-title-cardsCategories-carre{
     color:white;
@@ -229,5 +241,8 @@
         width:90vw;
         grid:none;
         height:30vh;
+    }
+    .tt-container-contact img{
+        display:none;
     }
 }

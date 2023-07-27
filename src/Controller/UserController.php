@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Tips;
 use App\Entity\User;
+use App\Form\TipsType;
 use App\Form\UserType;
 use App\Repository\TipsRepository;
 use App\Repository\UserRepository;
@@ -20,10 +21,13 @@ class UserController extends AbstractController
     public function show(User $user, TipsRepository $tipsRepository): Response
     {
         $tips = $tipsRepository->findAll();
+        $tip = new Tips();
+        $form = $this->createForm(TipsType::class, $tip);
 
         return $this->render('user/show.html.twig', [
             'user' => $user,
             'tips' => $tips,
+            'form' => $form->createView(),
         ]);
     }
     #[Route('/new', name: 'app_user_new', methods: ['GET', 'POST'])]
@@ -49,8 +53,9 @@ class UserController extends AbstractController
 
 
     #[Route('/', name: 'app_user_index', methods: ['GET'])]
-    public function index(UserRepository $userRepository): Response
+    public function index(UserRepository $userRepository, Tips $tips, TipsRepository $tipsRepository): Response
     {
+
         return $this->render('user/index.html.twig', [
             'users' => $userRepository->findAll(),
         ]);

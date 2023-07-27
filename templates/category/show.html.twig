@@ -3,26 +3,41 @@
 {% block title %}Category{% endblock %}
 
 {% block body %}
-        {% if category.id == 1 %}
-            <div class="tt-containerContinent">
-                <img src="/assets/images/Categories-HomePageCards/CARDS-Food.jpg" alt="Image Continent 1" class="continent-picture">
-                <div class="tt-textContinent">
-                    <h1 class="tt-continentTitle">{{ category.name }}</h1>
-                    <p class="tt-describeContinent">
-                        Imaginez-vous déambulant dans les ruelles animées d'un marché asiatique, où les arômes envoûtants du curry, du gingembre et de la coriandre vous captivent dès le premier pas. Les étals colorés regorgent de délices tels que les dim sum délicats, les nouilles sautées fumantes et les rouleaux de printemps croustillants. L'Asie est une véritable célébration des contrastes, alliant subtilement les saveurs sucrées, salées, épicées et acidulées dans un ballet harmonieux pour votre palais.
-                        <br>
-                        En continuant votre périple gastronomique, vous traversez les vastes plaines d'Europe, où les mets succulents se marient à l'élégance et à la finesse. Les senteurs du fromage français délicatement affiné vous attirent comme un aimant, tandis que les pâtes italiennes fraîchement préparées vous promettent une expérience inoubliable. L'Europe, berceau de la gastronomie raffinée, vous offre une symphonie de goûts authentiques, riches en histoire et en tradition.
-
-                        Mais n'oublions pas l'Amérique, ce continent aux multiples facettes où les saveurs se déchaînent dans une explosion de créativité. Des hamburgers juteux aux tacos épicés, en passant par les grillades fumantes au barbecue, l'Amérique vous offre un festin copieux et généreux, reflétant la diversité et la convivialité de ses peuples.
-
-                        En traversant les océans, vous atterrissez en Afrique, un continent aux mille trésors culinaires. Les épices envoûtantes bercent vos sens alors que vous dégustez un délicieux tajine marocain ou un foufou africain crémeux. Chaque bouchée est un voyage dans le temps, reliant le présent à des siècles de savoir-faire ancestral.</p>
+    <div class="tt-container-linkOtherCat">
+        {% for cat in otherCategories %}
+            <a class="tt-linkOtherCat" href="{{ path('app_category_show', {id: cat.id}) }}">
+                <div>
+                    {{ cat.name }}
                 </div>
+            </a>
+        {% endfor %}
+    </div>
+        {% if category.id == 1 %}
+            <div class="tt-title-ContinentCat">
+                <h1 class="tt-continentTitle">{{ category.name }}</h1>
+            </div>
+            <div class="tt-containerContinent">
+                <img class="continent-picture" src="/assets/images/Categories-HomePageCards/CARDS-Food.jpg" alt="Image Continent 1">
+                    <p class="tt-describeContinent">
+                        Imaginez-vous déambulant dans les ruelles animées d'un marché asiatique, les étals colorés regorgent de délices
+                        tels que les dim sum délicats, les nouilles sautées fumantes et les rouleaux de printemps croustillants.
+                        L'Asie est une véritable célébration des contrastes, alliant subtilement les saveurs sucrées, salées, épicées
+                        et acidulées dans un ballet harmonieux pour votre palais.
+                        <br>
+                        En continuant votre périple gastronomique, vous traversez les vastes plaines d'Europe, où les mets succulents
+                        se marient à l'élégance et à la finesse. L'Europe, berceau de la gastronomie raffinée
+                        , vous offre une symphonie de goûts authentiques, riches en histoire et en tradition.
+                        En traversant les océans, vous atterrissez en Afrique, un continent aux mille trésors culinaires.
+                        Les épices envoûtantes bercent vos sens alors que vous dégustez un délicieux tajine marocain ou un foufou africain crémeux.
+                        Chaque bouchée est un voyage dans le temps, reliant le présent à des siècles de savoir-faire ancestral.</p>
             </div>
         {% elseif category.id == 2 %}
+            <div class="tt-title-ContinentCat">
+                <h1 class="tt-continentTitle">{{ category.name }}</h1>
+            </div>
             <div class="tt-containerContinent">
-                <img src="/assets/images/Categories-HomePageCards/CARDS-Glisse.jpg" alt="Image Continent 2" class="continent-picture">
+                <img src="/assets/images/Tanner-Hall3.jpg" alt="Image Continent 2" class="continent-picture">
                 <div class="tt-textContinent">
-                    <h1 class="tt-continentTitle">{{ category.name }}</h1>
                     <p class="tt-describeContinent">Les sports de glisse sont une source d'excitation et de plaisir pour de nombreux passionnés à travers le monde. Que ce soit sur la neige, la glace ou l'eau, ces activités dynamiques offrent des sensations uniques.
 
                         Sur les pistes de ski enneigées, les skieurs dévalent les pentes à toute vitesse, défiant les lois de la gravité dans des descentes palpitantes. Les snowboarders, quant à eux, glissent avec style en effectuant des figures audacieuses dans les snowparks.
@@ -33,10 +48,10 @@
                 </div>
             </div>
         {% elseif category.id == 3 %}
+            <div class="tt-title-ContinentCat"><h1 class="tt-continentTitle">{{ category.name }}</h1></div>
             <div class="tt-containerContinent">
                 <img src="/assets/images/sunset-bali.jpeg" alt="Image Continent 3" class="continent-picture">
                 <div class="tt-textContinent">
-                    <h1 class="tt-continentTitle">{{ category.name }}</h1>
                     <p class="tt-describeContinent">
                         Les couchers de soleil dans le monde sont de véritables tableaux vivants. Du désert aux côtes océaniques, des montagnes aux villes, chaque endroit offre un spectacle unique. Teintes ardentes dans les déserts, reflets dorés sur les côtes, calme serein dans les montagnes, lumières urbaines scintillantes en ville, couleurs pastel dans les contrées polaires. Partout, ces moments magiques invitent à la contemplation et à l'émerveillement devant la beauté de la nature. Chaque coucher de soleil est une toile éphémère, une poésie visuelle rappelant la splendeur du monde.<br>
                         Quel que soit le coin du monde où l'on se trouve, les couchers de soleil sont une invitation à la contemplation, à la connexion avec la nature et à l'émerveillement devant la beauté qui nous entoure. Ils sont le rappel poétique que chaque jour se termine dans une explosion de couleurs, et que demain sera une nouvelle toile vierge pour que le soleil y peigne son chef-d'œuvre éphémère.
@@ -44,10 +59,10 @@
                 </div>
             </div>
         {% elseif category.id == 4 %}
+            <div class="tt-title-ContinentCat"><h1 class="tt-continentTitle">{{ category.name }}</h1></div>
             <div class="tt-containerContinent">
                 <img src="/assets/images/MusicBar-ASIA-Th.jpg" alt="Image Continent 3" class="continent-picture">
                 <div class="tt-textContinent">
-                    <h1 class="tt-continentTitle">{{ category.name }}</h1>
                     <p class="tt-describeContinent">
                         Dans tous les coins du monde, les reggaes bars sont des havres de paix et de bonne humeur, où la musique reggae fusionne avec l'atmosphère chaleureuse pour créer une expérience inoubliable. Ces établissements sont bien plus qu'un simple lieu de rencontre, ils sont une véritable célébration de la culture et du style de vie reggae.
                         En franchissant les portes d'un reggae bar, vous êtes immédiatement transporté dans une ambiance détendue et décontractée. Les murs sont ornés de symboles rastafari, de drapeaux jamaïcains et d'affiches de légendes reggae, évoquant l'esprit roots de ce genre musical emblématique. L'odeur de l'encens flotte dans l'air, ajoutant une touche envoûtante à cette atmosphère unique.<br>
@@ -56,10 +71,10 @@
                 </div>
             </div>
         {% elseif category.id == 5 %}
+            <div class="tt-title-ContinentCat"><h1 class="tt-continentTitle">{{ category.name }}</h1></div>
             <div class="tt-containerContinent">
                 <img src="/assets/images/Continents/Star-Sunset-NorthAmerica-USA.jpg" alt="Image Continent 3" class="continent-picture">
                 <div class="tt-textContinent">
-                    <h1 class="tt-continentTitle">{{ category.name }}</h1>
                     <p class="tt-describeContinent">
                         'Amérique du Nord, un continent aux multiples visages, offre une palette d'expériences riches et variées. Des gratte-ciels étincelants des grandes villes aux vastes étendues sauvages, cette terre de contrastes promet un voyage inoubliable.
 
@@ -70,16 +85,14 @@
                 </div>
             </div>
         {% elseif category.id == 6 %}
+            <div class="tt-title-ContinentCat"><h1 class="tt-continentTitle">{{ category.name }}</h1></div>
             <div class="tt-containerContinent">
                 <img src="/assets/images/StreetArt-Europe-Fr.jpeg" alt="Image Continent 3" class="continent-picture">
                 <div class="tt-textContinent">
-                    <h1 class="tt-continentTitle">{{ category.name }}</h1>
                     <p class="tt-describeContinent">
                         Le street art, ce langage artistique urbain, s'est épanoui dans le monde entier comme un mouvement créatif audacieux, reflétant l'essence même de la culture contemporaine. Des ruelles anonymes aux murs des grandes métropoles, le street art est devenu une toile vivante qui s'exprime librement, captivant l'attention des passants et laissant une empreinte indélébile dans l'esprit de ceux qui le découvrent.
                         Les artistes urbains, souvent anonymes, se lancent dans cette aventure audacieuse en utilisant les rues comme une galerie d'art ouverte à tous. Les murs deviennent leurs toiles, les graffitis leurs pinceaux et les bombes de peinture leurs outils d'expression. Chaque œuvre est unique, portant un message ou une émotion qui transcende les frontières culturelles et linguistiques.
                         <br>
-                        Mais le street art ne se limite pas à l'esthétique. C'est aussi une forme d'expression sociale et politique. Les artistes utilisent leurs créations pour faire passer des messages engagés, évoquant des problèmes sociaux, environnementaux ou politiques. Le street art devient ainsi un outil puissant pour susciter la réflexion et encourager le débat public.
-
                         À travers le monde, le street art a transcendé les frontières géographiques et culturelles. Des œuvres emblématiques de Banksy à Bristol, aux fresques colorées de São Paulo, en passant par les graffitis audacieux de New York, chaque ville offre une expérience artistique unique qui reflète sa propre identité.
                        </p>
                 </div>
@@ -102,4 +115,5 @@
         <h2 class="tt-tipsContinent">There's no TIPS available for this category.</h2>
         </div>
     {% endif %}
+
     {% endblock %}

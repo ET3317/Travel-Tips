@@ -1,25 +1,59 @@
-.continent-picture {
-    width: 100vw;
-    height: 60vh;
-    margin-left: 5%;
+.tt-title-ContinentCat {
+    background-color:#FFA63E;
+    display:flex;
+    justify-content:center;
+    align-items: center;
     border-radius:6px;
+    height:15vh;
 }
 .tt-continentTitle{
-    text-align:center;
     font-family: "Just Another Hand", cursive;
-    font-size:4vw;
+    font-size:6vw;
+    margin-top:2%
 }
+.tt-linkOtherCat{
+    color:black;
+    font-family:'Just Another Hand', cursive;
+    font-size:x-large;
+    text-decoration: none;
+}
+#tt-contName{
+
+}
+.tt-linkOtherCat:hover{
+    text-decoration: underline;
+}
+.tt-container-linkOtherCat{
+    padding-top: 2%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color:#FFA63E;
+    width:100vw;
+}
+
 .tt-containerContinent{
     display:flex;
     flex-direction:row;
+    justify-content: space-evenly;
     align-items:center;
-    margin-top:5%;
+    width:90vw;
+    margin-left: 5vw;
+    margin-top:5vh;
+    margin-bottom:10vh;
+}
+.continent-picture {
+    height: 50vh;
+    width:50vw;
+    border-radius:6px;
 }
 .tt-describeContinent{
-    width:80%;
+    width:45vw;
     font-family: 'Itim', cursive;
     margin-left:5%;
 }
+
+/*TIPS */
 .tt-title-tipsContinent{
     background-color:#FFA63E;
     width:50vw;
@@ -34,4 +68,21 @@
     font-family: "Just Another Hand", cursive;
     font-size:4vw;
     margin-top:2%
+}
+/*          PHONE            */
+@media screen and (max-width: 700px) {
+    .tt-containerContinent {
+        flex-direction: column;
+        width:90vw;
+    }
+    .tt-describeContinent{
+        width: 100%;
+    }
+    .continent-picture{
+        width:100%;
+        margin-bottom: 5%;
+    }
+    .tt-continentTitle{
+        font-size:14vw;
+    }
 }

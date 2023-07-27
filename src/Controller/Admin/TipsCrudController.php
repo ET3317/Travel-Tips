@@ -21,16 +21,12 @@ class TipsCrudController extends AbstractCrudController
     {
         yield TextField::new('title', 'Title');
         yield TextEditorField::new('text', 'Text');
-        yield ImageField::new('picture', 'Picture')
-            ->setBasePath('uploads/images')
-            ->setUploadDir('public/');
+        yield ImageField::new('imageFile')->setUploadedFileNamePattern('[randomhash],')
+            ->setUploadDir('public/assets/images/tips/');
         yield AssociationField::new('category', 'Category')->autocomplete();
         yield AssociationField::new('city', 'City')->autocomplete();
         yield AssociationField::new('country', 'Country')->autocomplete();
-        yield AssociationField::new('continent', 'Continent')->autocomplete()
-        ->formatValue(function ($value, $entity) {
-        return $entity->getContinent()->getName(); // Remplacez "getName()" par le getter de la propriété que vous voulez afficher
-    });
-        yield AssociationField::new('user', 'Author')->autocomplete();
+        yield AssociationField::new('continent', 'Continent')->autocomplete();
 }
+
 }

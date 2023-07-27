@@ -1,12 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Reset your password{% endblock %}
-
 {% block body %}
-    <h1>Reset your password</h1>
-
-    {{ form_start(resetForm) }}
-        {{ form_row(resetForm.plainPassword) }}
-        <button class="btn btn-primary">Reset password</button>
-    {{ form_end(resetForm) }}
+    <section style="display: flex; flex-direction: row; justify-content: center; margin: auto; width:80vw; margin-top: 5%">
+        <img class="tt-rect" src="{{ asset('assets/images/components/Rectangle3.png') }}">
+            {{ form_start(resetForm) }}
+            {{ form_row(resetForm.plainPassword) }}
+            <button class="btn btn-primary">Reset password</button>
+            {{ form_end(resetForm) }}
+        <img class="tt-rect" src="{{ asset('assets/images/components/Rectangle4.png') }}">
+    </section>
 {% endblock %}

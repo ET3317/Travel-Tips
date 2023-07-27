@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Welcome to Travel Tips{% endblock %}
 
 {% block body %}
         <!----PRESENTATION------>
@@ -26,20 +26,16 @@
         </div>
         <!----END OF PRESENTATION------>
 
-        <!----INSCRIPTION / CONNECTION------>
-        <div class="tt-container-logHome">
-            <img src="/assets/images/Rectangle97.png">
+        <!----POST TIPS------>
+        <div class="tt-container-formTipsHomePage">
+            <img class="tt-rect" src="/assets/images/Rectangle97.png">
             <section class="tt-register-login-homePage">
-                <div class="tt-loginForm-homePage">
-                    {% include 'modules/_login.html.twig' %}
-                </div>
-                <div class="tt-registrationForm-homePage">
-                    <p>Published a TIPS</p>
-                </div>
+                <img class="tt-componentPostTips" src="/assets/images/components/Component-PostTips.png">
+                {{ include('tips/_form.html.twig') }}
             </section>
-            <img src="/assets/images/Rectangle99.png">
+            <img class="tt-rect" src="/assets/images/Rectangle99.png">
         </div>
-        <!----END OF INSCRIPTION / CONNECTION------>
+        <!----END OF POST TIPS------>
 
     <!-- CATEGORIES -->
     <div style="display: flex; justify-content: center">
@@ -68,61 +64,10 @@
         <!------SMALL TIPS CARD-------->
         <div class="tt-container-titleCategories">
             <img src="/assets/images/Component-tips-homePage.png" style="width:40vw; height:30vh; margin-top:5%">
-            <div class="rectangle-3D-tips">
-                <div class="carre-3D-tips">
-                    <div class="cercle-tips"></div>
-                    <div style="margin-top:-30%">
-                        <p>USER</p>
-                        <p>CATEGORY</p>
-                        <p>COUNTRY</p>
-                    </div>
-                    <button>SEE THE TIPS</button>
-                </div>
-            </div>
-            <!------end of SMALL TIPS CARD-------->
-            <div class="rectangle-3D-tips">
-                <div class="carre-3D-tips">
-                    <div class="cercle-tips"></div>
-                    <div style="margin-top:-30%">
-                        <p>USER</p>
-                        <p>CATEGORY</p>
-                        <p>COUNTRY</p>
-                    </div>
-                </div>
-            </div>
-            <!------end of SMALL TIPS CARD-------->
-            <div class="rectangle-3D-tips">
-                <div class="carre-3D-tips">
-                    <div class="cercle-tips"></div>
-                    <div style="margin-top:-30%">
-                        <p>USER</p>
-                        <p>CATEGORY</p>
-                        <p>COUNTRY</p>
-                    </div>
-                </div>
-            </div>
-            <!------end of SMALL TIPS CARD-------->
-            <div class="rectangle-3D-tips">
-                <div class="carre-3D-tips">
-                    <div class="cercle-tips"></div>
-                    <div style="margin-top:-30%">
-                        <p>USER</p>
-                        <p>CATEGORY</p>
-                        <p>COUNTRY</p>
-                    </div>
-                </div>
-            </div>
-            <!------end of SMALL TIPS CARD-------->
-            <div class="rectangle-3D-tips">
-                <div class="carre-3D-tips">
-                    <div class="cercle-tips"></div>
-                    <div style="margin-top:-30%">
-                        <p>USER</p>
-                        <p>CATEGORY</p>
-                        <p>COUNTRY</p>
-                    </div>
-                </div>
-            </div>
         </div>
-        <!------end of SMALL TIPS PART-------->
+<section class="tt-tipsInCat">
+    {% for tip in tips %}
+        {% include 'modules/tipsCard.html.twig' %}
+    {% endfor %}
+</section>
 {% endblock %}

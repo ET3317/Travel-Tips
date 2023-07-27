@@ -6,17 +6,22 @@
     {% for flash_error in app.flashes('reset_password_error') %}
         <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
     {% endfor %}
+<section style="display: flex; flex-direction: row; justify-content: center; margin: auto; width:80vw; margin-top: 5%; margin-bottom: 10%">
+    <img class="tt-rect" src="{{ asset('assets/images/components/Rectangle3.png') }}">
+    <div style="display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; width:60%; border: 2px solid #ffa63e; border-radius:6px; margin:auto; height:50vh">
     <h1>Reset your password</h1>
-
+        <div style="display:flex; justify-content:center; margin-top: 5%; margin-bottom: 5vh">
     {{ form_start(requestForm) }}
         {{ form_row(requestForm.email) }}
-        <div>
+
             <small>
                 Enter your email address, and we will send you a
                 link to reset your password.
             </small>
         </div>
-
-        <button class="btn btn-primary">Send password reset email</button>
+        <button class="btn btn-warning">Send password reset email</button>
+    </div>
+    <img class="tt-rect" src="{{ asset('assets/images/components/Rectangle4.png') }}">
+</section>
     {{ form_end(requestForm) }}
 {% endblock %}

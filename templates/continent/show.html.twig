@@ -3,56 +3,64 @@
 {% block title %}Continent{% endblock %}
 
 {% block body %}
-
+<div class="tt-container-linkOtherCat">
+    {% for cont in otherContinents %}
+        <a class="tt-linkOtherCat" href="{{ path('app_continent_show', {id: cont.id}) }}">
+            <div>
+                {{ cont.name }}
+            </div>
+        </a>
+    {% endfor %}
+</div>
     {% if continent.id == 1 %}
+        <div class="tt-title-ContinentCat">
+            <h1 class="tt-continentTitle">{{ continent.name }}</h1>
+        </div>
         <div class="tt-containerContinent">
         <img src="/assets/images/Continents/Star-Asia-Sl.jpeg" alt="Image Continent 1" class="continent-picture">
-            <div class="tt-textContinent">
-                    <h1 class="tt-continentTitle">{{ continent.name }}</h1>
             <p class="tt-describeContinent">L'Asie, le plus vaste continent de la planète, abrite une richesse culturelle, historique et géographique incomparable. Avec une superficie de plus de 44 millions de kilomètres carrés, l'Asie s'étend de l'est de l'Europe jusqu'à l'extrémité orientale de l'Asie-Pacifique, regroupant 49 pays aux cultures, langues et traditions diverses. Du sommet enneigé de l'Himalaya aux îles tropicales de l'Indonésie, en passant par les déserts brûlants du Moyen-Orient, l'Asie offre une palette de paysages à couper le souffle.<br>
                 L'Asie, berceau de civilisations anciennes : L'histoire de l'humanité trouve ses racines en Asie avec des civilisations anciennes telles que la Mésopotamie, la vallée de l'Indus, la Chine et la vallée du Mékong. Ces cultures ont laissé un héritage durable en architecture, en art et en philosophie, visible dans des sites emblématiques tels que la Grande Muraille de Chine, les temples d'Angkor au Cambodge, et les pyramides d'Égypte.</p>
-            </div>
         </div>
     {% elseif continent.id == 2 %}
+    <div class="tt-title-ContinentCat">
+        <h1 class="tt-continentTitle">{{ continent.name }}</h1>
+    </div>
         <div class="tt-containerContinent">
             <img src="/assets/images/Continents/continents-africa.jpeg" alt="Image Continent 2" class="continent-picture">
-            <div class="tt-textContinent">
-                <h1 class="tt-continentTitle">{{ continent.name }}</h1>
                 <p class="tt-describeContinent">L'Afrique, souvent surnommée le berceau de l'humanité, est un continent vaste et majestueux. Avec une superficie de plus de 30 millions de kilomètres carrés, l'Afrique est le deuxième plus grand continent du monde, abritant 54 pays aux multiples langues, coutumes et traditions. Des paysages époustouflants, des réserves de faune sauvage incroyables et des cultures ancestrales en font une destination fascinante pour les voyageurs avides de découvertes authentiques.<br>
-                    L'Afrique est un continent captivant, offrant une expérience de voyage incomparable grâce à sa richesse culturelle, son patrimoine historique et ses merveilles naturelles. Des rencontres avec les populations locales aux safaris inoubliables, chaque voyage en Afrique promet d'être une aventure unique et enrichissante. Il suffit de se laisser emporter par la magie de l'Afrique et de se laisser guider par ses innombrables trésors./p>
-            </div>
+                    L'Afrique est un continent captivant, offrant une expérience de voyage incomparable grâce à sa richesse culturelle, son patrimoine historique et ses merveilles naturelles. Des rencontres avec les populations locales aux safaris inoubliables, chaque voyage en Afrique promet d'être une aventure unique et enrichissante. Il suffit de se laisser emporter par la magie de l'Afrique et de se laisser guider par ses innombrables trésors.</p>
         </div>
     {% elseif continent.id == 3 %}
+        <div class="tt-title-ContinentCat">
+            <h1 class="tt-continentTitle">{{ continent.name }}</h1>
+        </div>
         <div class="tt-containerContinent">
             <img src="/assets/images/Continents/continent-sth-america.jpg" alt="Image Continent 3" class="continent-picture">
-            <div class="tt-textContinent">
-                <h1 class="tt-continentTitle">{{ continent.name }}</h1>
-                <p class="tt-describeContinent">'Amérique du Sud, un continent d'une beauté sans pareille, séduit les voyageurs par sa richesse naturelle et culturelle. De l'Amazonie luxuriante aux anciennes cités incas, ce continent est une invitation à l'émerveillement.
+                <p class="tt-describeContinent">L'Amérique du Sud, un continent d'une beauté sans pareille, séduit les voyageurs par sa richesse naturelle et culturelle. De l'Amazonie luxuriante aux anciennes cités incas, ce continent est une invitation à l'émerveillement.
 
                     Nature sauvage : L'Amérique du Sud abrite certaines des merveilles naturelles les plus impressionnantes de la planète. Des majestueuses chutes d'Iguazu à la biodiversité de l'Amazonie, en passant par les paysages lunaires du désert d'Atacama, chaque coin du continent émerveille les amoureux de la nature.
                     Patrimoine culturel : Les vestiges des anciennes civilisations comme les Incas au Pérou avec le Machu Picchu, les Mayas au Mexique avec Chichen Itza, et les mystérieuses lignes de Nazca au Pérou, témoignent de la grandeur passée de l'Amérique du Sud. Les villes coloniales colorées, telles que Cartagena en Colombie et Quito en Équateur, offrent également un aperçu captivant de l'histoire et de la culture du continent.<br>
                     L'Amérique du Sud, une terre d'une diversité époustouflante, promet un voyage d'aventures et de découvertes. Des trésors naturels exceptionnels aux héritages culturels uniques, ce continent envoûte les voyageurs en quête de nouvelles expériences. À chaque pas, l'Amérique du Sud révèle sa magie et laisse une empreinte indélébile dans le cœur de ceux qui s'y aventurent.</p>
-            </div>
         </div>
     {% elseif continent.id == 4 %}
+        <div class="tt-title-ContinentCat">
+            <h1 class="tt-continentTitle">{{ continent.name }}</h1>
+        </div>
         <div class="tt-containerContinent">
         <img src="/assets/images/Continents/Star-Sunset-NorthAmerica-USA.jpg" alt="Image Continent 3" class="continent-picture">
-        <div class="tt-textContinent">
-            <h1 class="tt-continentTitle">{{ continent.name }}</h1>
             <p class="tt-describeContinent">
-                'Amérique du Nord, un continent aux multiples visages, offre une palette d'expériences riches et variées. Des gratte-ciels étincelants des grandes villes aux vastes étendues sauvages, cette terre de contrastes promet un voyage inoubliable.
+                L'Amérique du Nord, un continent aux multiples visages, offre une palette d'expériences riches et variées. Des gratte-ciels étincelants des grandes villes aux vastes étendues sauvages, cette terre de contrastes promet un voyage inoubliable.
 
                 Villes cosmopolites : L'Amérique du Nord abrite certaines des villes les plus dynamiques et éclectiques du monde. New York, la ville qui ne dort jamais, captive par son énergie frénétique et ses monuments emblématiques tels que la Statue de la Liberté et Times Square. San Francisco séduit par son charme pittoresque avec le Golden Gate Bridge et ses célèbres collines. Toronto, Montréal et Vancouver reflètent quant à elles la diversité culturelle et la modernité de ce continent.
-                Nature grandiose : De vastes étendues sauvages caractérisent également l'Amérique du Nord. Des parcs nationaux comme Yellowstone aux États-Unis et Banff au Canada offrent des panoramas époustouflants de montagnes, de canyons, de geysers et de lacs cristallins. Sans oublier les paysages côtiers spectaculaires de la côte californienne ou des fjords de l'Alaska, où la nature déploie toute sa splendeur.
-                <br>
-                L'Amérique du Nord est un continent aux multiples facettes, mêlant modernité et traditions, nature grandiose et villes cosmopolites. Des gratte-ciels impressionnants aux parcs nationaux préservés, chaque pas révèle une nouvelle dimension de cette terre fascinante. Un voyage en Amérique du Nord promet de combler les attentes des voyageurs curieux et avides de découvertes.</p>
+                <br>Nature grandiose : De vastes étendues sauvages caractérisent également l'Amérique du Nord. Des parcs nationaux comme Yellowstone aux États-Unis et Banff au Canada offrent des panoramas époustouflants de montagnes, de canyons, de geysers et de lacs cristallins. Sans oublier les paysages côtiers spectaculaires de la côte californienne ou des fjords de l'Alaska, où la nature déploie toute sa splendeur.
+               </p>
         </div>
-    </div>
     {% elseif continent.id == 5 %}
+        <div class="tt-title-ContinentCat">
+            <h1 class="tt-continentTitle">{{ continent.name }}</h1>
+        </div>
         <div class="tt-containerContinent">
             <img src="/assets/images/Continents/Continent-Europe.jpeg" alt="Image Continent 3" class="continent-picture">
-            <div class="tt-textContinent">
-                <h1 class="tt-continentTitle">{{ continent.name }}</h1>
                 <p class="tt-describeContinent">
                     'Amérique du Nord, un continent aux multiples visages, offre une palette d'expériences riches et variées. Des gratte-ciels étincelants des grandes villes aux vastes étendues sauvages, cette terre de contrastes promet un voyage inoubliable.
 
@@ -60,7 +68,6 @@
                     Nature grandiose : De vastes étendues sauvages caractérisent également l'Amérique du Nord. Des parcs nationaux comme Yellowstone aux États-Unis et Banff au Canada offrent des panoramas époustouflants de montagnes, de canyons, de geysers et de lacs cristallins. Sans oublier les paysages côtiers spectaculaires de la côte californienne ou des fjords de l'Alaska, où la nature déploie toute sa splendeur.
                     <br>
                     L'Amérique du Nord est un continent aux multiples facettes, mêlant modernité et traditions, nature grandiose et villes cosmopolites. Des gratte-ciels impressionnants aux parcs nationaux préservés, chaque pas révèle une nouvelle dimension de cette terre fascinante. Un voyage en Amérique du Nord promet de combler les attentes des voyageurs curieux et avides de découvertes.</p>
-            </div>
         </div>
     {% else %}
         <h2>Aucun continent ne correspond à l'URL</h2>
@@ -72,14 +79,15 @@
         </div>
 <section class="tt-tipsInCat">
         {% for tip in tips %}
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{{ tip.picture }}" alt="Image du Tip">
-                <div class="card-body">
-                    <h5 class="card-title">{{ tip.title }}</h5>
-                    <p class="card-text">{{ tip.text }}</p>
-                    <a href="{{ path('app_tips_show', {'id': tip.id}) }}" class="btn btn-primary">Voir le Tips</a>
-                </div>
-            </div>
+    {% include 'modules/tipsCard.html.twig' %}
+{#    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{ tip.imageName }}" alt="Image du Tip">
+        <div class="card-body">
+            <h5 class="card-title">{{ tip.title }}</h5>
+            <p class="card-text">{{ tip.text }}</p>
+            <a href="{{ path('app_tips_show', {'id': tip.id}) }}" class="btn btn-primary">Voir le Tips</a>
+        </div>
+    </div>#}
         {% endfor %}
 </section>
     {% else %}

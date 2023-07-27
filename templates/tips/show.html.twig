@@ -3,17 +3,16 @@
 {% block title %}Tips{% endblock %}
 
 {% block body %}
+    <h1 class="tt-titleOneTips">{{ tip.title }}</h1>
     <section class="tt-container-oneTips">
-        <h1 class="tt-titleOneTips">{{ tip.title }}</h1>
         <div class="tt-tipsRow">
-        <div class="tt-container-pictureOneTips">
-            {{ tip.picture }}
-        </div>
+            <img class="tt-img-tips" src="/assets/images/tips/{{ tip.imageName }}">
         <div class="tt-container-textOneTips">
             {{ tip.text }}
         </div>
         </div>
+
     </section>
 
-    <a href="{{ path('app_tips_index') }}">back to all TIPS</a>
+    <a href="{{ referer }}">back to the back page</a>
 {% endblock %}

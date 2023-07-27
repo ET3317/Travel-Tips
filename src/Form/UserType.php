@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class UserType extends AbstractType
 {
@@ -48,6 +49,9 @@ class UserType extends AbstractType
                     'style' => 'margin-top: 1vh;', // Ajoutez le style CSS personnalisé ici
                 ]
             ])
+/*            ->add('imageFile', VichImageType::class, [
+                'label' => 'Profil Picture',
+            ]);*/
         ;
     }
 

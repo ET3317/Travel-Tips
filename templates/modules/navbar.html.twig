@@ -51,7 +51,7 @@
 <div class="collapse" id="navbarToggleExternalContent">
     <div class="bg-light p-4">
         <a href="{{ path('app_home') }}" style="text-decoration:none">
-            <h5 class="text-warning h4">TRAVEL TIPS</h5></a>
+            <h5 class="text-warning h4" id="tt-title-navbar">TRAVEL TIPS</h5></a>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
                 {% if app.user %}
@@ -93,15 +93,13 @@
             </ul>
         </li>
         </ul>
-        <a class="navbar-brand" href="#"><img src="/assets/images/logo-TravelTips.png" style="width:60px; height:80px"></a>
     </div>
 </div>
 <nav class="navbar navbar-dark bg-light">
     <div class="container-fluid">
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success text-info border-info" type="submit">Search</button>
-        </form>
+        <div class="d-flex">
+            <a class="navbar-brand" href="{{ path('app_home') }}"><img src="/assets/images/logo-TravelTips.png" style="width:60px; height:80px"></a>
+        </div>
         <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

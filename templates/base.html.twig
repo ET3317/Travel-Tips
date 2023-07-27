@@ -25,6 +25,12 @@
     </head>
     <body>
     {% include 'modules/navbar.html.twig' %}
+    <!-- Display flash messages -->
+    {% for flashMessage in app.flashes('success') %}
+        <div class="alert alert-success" role="alert">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
         {% block body %}{% endblock %}
     {% include 'modules/footer.html.twig' %}
     </body>

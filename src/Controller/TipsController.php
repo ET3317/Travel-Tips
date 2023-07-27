@@ -25,28 +25,40 @@ class TipsController extends AbstractController
     #[Route('/new', name: 'app_tips_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
+        /*// Check if the user is authenticated
+        if (!$this->getUser()) {
+            throw $this->createAccessDeniedException('You must be logged in to create a new Tips.');
+        }*/
+
         $tip = new Tips();
         $form = $this->createForm(TipsType::class, $tip);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $tip->setUser($this->getUser());
             $entityManager->persist($tip);
             $entityManager->flush();
+            $this->addFlash('success', 'Le tips a été publié avec succès !');
+
+
 
             return $this->redirectToRoute('app_tips_index', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('tips/new.html.twig', [
             'tip' => $tip,
-            'form' => $form,
+            'form' => $form->createView(),
         ]);
     }
 
     #[Route('/{id}', name: 'app_tips_show', methods: ['GET'])]
-    public function show(Tips $tip): Response
+    public function show(Tips $tip, Request $request): Response
     {
+        $referer = $request->headers->get('referer');
         return $this->render('tips/show.html.twig', [
             'tip' => $tip,
+            'referer' => $referer,
         ]);
     }
 

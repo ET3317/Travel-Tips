@@ -21,6 +21,17 @@ class CategoryRepository extends ServiceEntityRepository
         parent::__construct($registry, Category::class);
     }
 
+    // Dans le CategoryRepository
+    public function findAllExceptCurrent(Category $currentCategory): array
+    {
+        return $this->createQueryBuilder('c')
+            ->andWhere('c.id != :currentId')
+            ->setParameter('currentId', $currentCategory->getId())
+            ->getQuery()
+            ->getResult();
+    }
+
+
 //    /**
 //     * @return Category[] Returns an array of Category objects
 //     */

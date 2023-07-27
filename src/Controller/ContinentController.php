@@ -44,14 +44,17 @@ class ContinentController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_continent_show', methods: ['GET'])]
-    public function show(Continent $continent, TipsRepository $tipsRepository): Response
+    public function show(Continent $continent, TipsRepository $tipsRepository, ContinentRepository $continentRepository): Response
     {
+        // Récupérer les autres catégories (sauf celle actuellement consultée)
+        $otherContinents = $continentRepository->findAllExceptCurrent($continent);
         // Récupérer les tips associés à la catégorie spécifique
         $tips = $tipsRepository->findBy(['continent' => $continent]);
 
         return $this->render('continent/show.html.twig', [
             'continent' => $continent,
             'tips' => $tips, // Passer les tips récupérés à la vue Twig
+            'otherContinents' => $otherContinents
         ]);
     }
 

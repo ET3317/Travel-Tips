@@ -1,0 +1,43 @@
+{# templates/contact/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact us{% endblock %}
+
+{% block body %}
+    <section class="tt-container-contact">
+    <img class="tt-rect" src="{{ asset('assets/images/components/Rectangle1.png') }}">
+    <div class="container">
+        <div class="row justify-content-center" style="height: 100vh;">
+            <div class="col-lg-6">
+                <h1 class="tt-title-contactForm">Contact us</h1>
+                <form class="needs-validation" novalidate>
+                    {{ form_start(formContact) }}
+                 {#   <div class="form-group mb-3">
+                        {{ form_row(formContact.name, {'attr': {'class': 'form-control', 'placeholder': 'Name'}}) }}
+                    </div>#}
+                    <div class="form-group mb-3">
+                        {{ form_row(formContact.email, {'attr': {'class': 'form-control', 'placeholder': 'E-mail'}}) }}
+                    </div>
+                    <div class="form-group mb-3">
+                        {{ form_row(formContact.objet, {'attr': {'class': 'form-control', 'placeholder': 'Object'}}) }}
+                    </div>
+                    <div class="form-group mb-3">
+                        {{ form_row(formContact.message, {'attr': {'class': 'form-control form-control-lg', 'placeholder': 'Message'}}) }}
+                    </div>
+                    <div class="form-group text-center">
+                        {{ form_row(formContact.send, {'attr': {'class': 'btn btn-warning'}}) }}
+                    </div>
+                    {{ form_end(formContact) }}
+                </form>
+                {# Afficher les messages flash s'il y en a #}
+                {% for message in app.flashes('success') %}
+                    <div class="alert alert-success">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <img class="tt-rect" src="{{ asset('assets/images/components/Rectangle2.png') }}">
+</section>
+{% endblock %}

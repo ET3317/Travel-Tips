@@ -44,16 +44,21 @@ class CategoryController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_category_show', methods: ['GET'])]
-    public function show(Category $category, TipsRepository $tipsRepository): Response
+    public function show(Category $category, CategoryRepository $categoryRepository, TipsRepository $tipsRepository): Response
     {
+        // Récupérer les autres catégories (sauf celle actuellement consultée)
+        $otherCategories = $categoryRepository->findAllExceptCurrent($category);
+
         // Récupérer les tips associés à la catégorie spécifique
         $tips = $tipsRepository->findBy(['category' => $category]);
 
         return $this->render('category/show.html.twig', [
             'category' => $category,
+            'otherCategories' => $otherCategories,
             'tips' => $tips, // Passer les tips récupérés à la vue Twig
         ]);
     }
+
 
     #[Route('/{id}/edit', name: 'app_category_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Category $category, EntityManagerInterface $entityManager): Response
